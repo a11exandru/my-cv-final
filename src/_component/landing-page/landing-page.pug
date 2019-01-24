@@ -1,0 +1,40 @@
+-
+    var myFullName="Alexandru Puiu";
+        myJobTitle="Web Developer";
+        socialList = [
+            {
+                icon: 'facebook',
+                url: 'https://facebook.com/a11exandru'
+            },
+            {
+                icon: 'instagram',
+                url: 'https://instagram.com/a11exandru'
+            },
+            {
+                icon: 'github',
+                url: 'https://github.com/a11exandru'
+            },
+            {
+                icon: 'whatsapp',
+                url: '0762182110'
+            },
+            {
+                icon: 'stackoverflow',
+                url: 'https://stackoverflow.com/users/10946792/alex-puiu'
+            },
+            {
+                icon: 'mail3',
+                url: 'alexpuiu20@yahoo.com'
+            },
+        ];
+
+#landing-page
+.landing-page
+    .landing-page__wrapper
+        h2.landing-page__name #{myFullName}
+        h1.landing-page__title=myJobTitle
+        ul.landing-page__social
+            each social in socialList
+                li.landing-page__item
+                        label.landing-page__label(for="")
+                            span(class=`my-cv__icon--${social.icon}`)
