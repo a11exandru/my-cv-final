@@ -25,18 +25,17 @@
 //- the view comes here
 #about-me
 .about-me
-    .about-me
-        .about-me__header-name=header
-        .about-me__avatar-wrapper
-            img.about-me__avatar(src=image)
-        .about-me__full-name=myFullName
-        .about-me__job=myJobTitle
-        .about-me__slogan=slogan
-        .about-me__title=achievement.title
-        .about-me__content=achievement.content
-        .about-me__title=coolStuff.title
-        .about-me__link-list
-            each button in coolStuff.buttonList
-                a.about-me__button-link(href=button.url)
-                    span=button.text
-                    span(class=`${button.icon}`)
+    .about-me__header=header
+    .about-me__avatar-wrapper
+        img.about-me__avatar(src=image)
+    .about-me__full-name=myFullName
+    .about-me__title=myJobTitle
+    .about-me__slogan=slogan
+    .about-me__title=achievement.title
+    .about-me__content=achievement.content
+    .about-me__title=coolStuff.title
+    .about-me__link-list
+        each button in coolStuff.buttonList
+            a.about-me__button-link(href=button.url, target='blank')
+                span.about-me__link-description=button.text
+                span(class=`${button.icon}`)

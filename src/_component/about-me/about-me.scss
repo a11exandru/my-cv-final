@@ -1,11 +1,90 @@
+.about-me {
+    background-image: radial-gradient(#FFE985 , #FA742B);
+    padding-bottom: 1rem;
+}
+
+.about-me__header {
+    color: white;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+}
+
 .about-me__avatar-wrapper {
-    text-align: center;
+    border: 0.5rem solid rgba(255, 255, 255, 0.5);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin: 1.5rem auto;
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        border: 0.5rem solid rgba(255, 255, 255, 0.3);
+        top: -1.1rem;
+        bottom: -1.1rem;
+        left: -1.1rem;
+        right: -1.1rem;
+        border-radius: 50%;
+    }
 }
 
 .about-me__avatar {
-    width: 30%;
+    width: 14rem;
+    height: 14rem;
+    border: 0.5rem solid rgb(238, 136, 81);
+    border-radius: 50%;
+}
+
+.about-me__full-name {
+    font-size: 2.5rem;
+}
+
+.about-me__title {
+    font-size: 2rem;
+}
+
+.about-me__full-name,
+.about-me__title {
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.about-me__slogan,
+.about-me__content {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    margin: 0.6rem 1rem;
+    text-align: justify;
+    text-indent: 3rem;
+}
+
+.about-me__link-list {
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .about-me__button-link {
-    display: block;
+    margin: 0 auto;
+    width: 75%;
+    font-size: 2.5rem;
+    text-decoration: none;
+    border: 0.3rem solid #7ea1a6;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: white;
+    color: #7ea1a6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    :visited {
+        color: #7ea1a6;
+    }
+}
+
+.about-me__link-description {
+    font-size: 1.5rem;
 }
