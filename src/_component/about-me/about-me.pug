@@ -1,0 +1,42 @@
+//- data comes here
+-
+    var header = '#about me'
+        image = '/asset/image/me&her.jpg'
+        slogan = 'I make the front-end world a better place every day.'
+        achievement = {
+                title: 'achievement',
+                content: 'I have 4 projects online, go to projects to see them.',
+        }
+        coolStuff = {
+            title: 'grab cool stuff',
+            buttonList: [
+                {
+                    url: 'https://github.com/a11exandru/my-cv-final',
+                    icon: 'my-cv__icon--github',
+                    text: 'Click to visit the GitHub project source'
+                },
+                {
+                    url: 'asset/doc/Alex Puiu CV.docx',
+                    icon: 'my-cv__icon--file-word',
+                    text: 'Click to see my KILLER CV'
+                }
+            ]
+        }
+//- the view comes here
+#about-me
+.about-me
+    .about-me
+        .about-me__header-name=header
+        .about-me__avatar-wrapper
+            img.about-me__avatar(src=image)
+        .about-me__full-name=myFullName
+        .about-me__job=myJobTitle
+        .about-me__slogan=slogan
+        .about-me__title=achievement.title
+        .about-me__content=achievement.content
+        .about-me__title=coolStuff.title
+        .about-me__link-list
+            each button in coolStuff.buttonList
+                a.about-me__button-link(href=button.url)
+                    span=button.text
+                    span(class=`${button.icon}`)
