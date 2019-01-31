@@ -9,7 +9,7 @@
                     'Build the website',
                     'Upload the website',
                     'Learn a lot of things (responsive web desing, how to hide the .html or .php extention)',
-                    'The link of these project is in #recent project section',
+                    'The link of these project is in #recent projects section',
                 ],
             },
             {
@@ -20,7 +20,7 @@
                     'Build the website',
                     'Upload the website',
                     'Learn a lot of things (display grid, fluid typography)',
-                    'The link of these project is in #recent project section',
+                    'The link of these project is in #recent projects section',
                 ],
             },
             {
@@ -31,11 +31,11 @@
                     'Build the website',
                     'Upload the website',
                     'Learn a lot of things (extend & collapse accordion)',
-                    'The link of these project is in #recent project section',
+                    'The link of these project is in #recent projects section',
                 ],
             },
             {
-                title: 'My first project (W3Schools-replica)',
+                title: 'My first project',
                 date: '1 Dec 2018',
                 company: 'My Home Company',
                 responsabilityList: [
@@ -50,19 +50,22 @@
 #experience
 .experience
     .experience__header=header
-    input(
+    input.experience__input-default(
         type="radio",
         name="experience",
         id="deselect",
+        checked
     )
-    label(for="deselect") &times;
     each experience, key in experienceList
         input.experience__input(
             type="radio",
             name="experience",
             id=`experience-id-${key}`,
         )
-        label.experience__title(for=`experience-id-${key}`)=experience.title
+        label.experience__title(for=`experience-id-${key}`)
+            | #{experience.title}
+            label(for="deselect")
+                span(class=`my-cv__icon--plus`)
         .experience__details
             .experience__top
                 .experience__date=experience.date
