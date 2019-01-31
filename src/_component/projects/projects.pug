@@ -1,0 +1,30 @@
+-
+    var header = '#my projects'
+        text = 'Click the buttons to see my projects'
+        projectsList = [
+            {
+                name: 'Roberto Blake replica',
+                url: 'https://a11exandru.github.io/Roberto-Blake-replica',
+            },
+            {
+                name: 'My Online CV',
+                url: 'https://a11exandru.github.io/my-cv-final',
+            },
+            {
+                name: 'Quick Blog',
+                url: 'https://a11exandru.github.io/quick-blog',
+            },
+            {
+                name: 'W3Schools Replica',
+                url: 'https://a11exandru.github.io/w3schools-replica',
+            },
+        ]
+    
+#projects
+.projects
+    .projects__header=header
+    .project__text
+    .projects__text=text
+    .projects__list
+        each project in projectsList
+            a.project(href=project.url, target='blank', title=project.name)=project.name

@@ -1,0 +1,41 @@
+.projects__header {
+    @extend %header;
+    color: $color-periwinkle-gray;
+}
+
+.projects__text {
+    text-align: center;
+    font-size: 1.7rem;
+    background-color: $color-green-vogue;
+    color: $color-white;
+    padding: 1.6rem;
+}
+
+.project{
+    margin: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+    width: 43%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: $color-white;
+    border: 0.2rem solid $color-green-vogue;
+    background-color: $color-pelarous;
+    border-radius: 0.3rem;
+
+    &:visited {
+        color: $color-white;
+    }
+
+    &:hover {
+        background-color: $color-regal-blue ;
+        border: 0.2rem solid $color-pelarous;
+    }
+}
+
+.projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: radial-gradient($color-anakiwa , $color-malibu)
+}
