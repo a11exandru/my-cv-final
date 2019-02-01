@@ -1,0 +1,42 @@
+-
+    var menuList = [
+        {
+            link: '#landing-page',
+            name: 'home',
+            icon: 'my-cv__icon--home',
+        },
+        {
+            link: '#about-me',
+            name: 'about-me',
+            icon: 'my-cv__icon--cool',
+        },
+        {
+            link: '#award',
+            name: 'awards',
+            icon: 'my-cv__icon--trophy',
+        },
+        {
+            link: '#skills',
+            name: 'my skills',
+            icon: 'my-cv__icon--fire',
+        },
+        {
+            link: '#experience',
+            name: 'experience',
+            icon: 'my-cv__icon--hammer',
+        },
+        {
+            link: '#projects',
+            name: 'my projects',
+            icon: 'my-cv__icon--briefcase',
+        },
+    ] 
+
+
+#menu
+.menu
+    .menu__list
+        each menu in menuList
+            a.menu__link(href=menu.link)=menu.name
+                .menu__span
+                    span(class=`${menu.icon}`)
