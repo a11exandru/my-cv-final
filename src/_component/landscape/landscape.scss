@@ -1,0 +1,67 @@
+.landscape,
+.landscape__input {
+    display: none;
+}
+
+.landscape {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-fiord;
+    transition: 0.24s;
+}
+
+.landscape__button {
+    display: block;
+    // display: none;
+    background-color: $color-fiord;
+    color: white;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+    padding: 0.7rem 0.5rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    border: 0.1rem solid $color-white;
+}
+
+.landscape__description {
+    text-align: center;
+    &:nth-child(2) {
+        font-size: 2rem;
+        padding: 2rem 0;
+    }
+}
+
+.landscape__item {
+    list-style: square;
+    margin-left: 4.5rem;
+}
+
+@media (orientation: landscape) {
+    .landscape {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-white;
+        font-size: 1.4rem;
+    }
+
+    .landscape__message--show {
+        display: none;
+    }
+
+    #landscape:checked + .landscape {
+        top: -100%;
+
+        .landscape__message--hide {
+            display: none;
+        }
+
+        .landscape__message--show {
+            display: inherit;
+        }
+    }
+}
