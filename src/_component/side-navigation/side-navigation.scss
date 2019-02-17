@@ -2,18 +2,22 @@
     display: none;
 }
 
+.side-navigation__link {
+    transition: 0.25s;
+}
+
 @media screen and (min-width: 1000px) {
     .content {
         margin-left: 12rem;
     }
     .side-navigation {
-        display: inline-block;
+        display: block;
         position: fixed;
         top: 0;
         left: 0;
         height: 100%;
         width: 12rem;
-        background-color: #111;
+        background-color: $color-black;
         font-size: 1.4rem;
     }
     
@@ -23,14 +27,14 @@
     }
     
     .side-navigation__link {
-        color: #818181;
+        color: $color-gray;
         display: block;
-        margin: 1rem 0.5rem;
+        margin: 1.3rem 0.5rem;
         justify-content: space-between;
         text-decoration: none;
 
         &:hover {
-            color: #f1f1f1;
+            color: $color-seashell;
         }
     }
 
