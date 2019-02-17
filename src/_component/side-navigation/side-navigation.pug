@@ -1,0 +1,40 @@
+-
+    var menuList = [
+        {
+            link: '#landing-page',
+            name: 'home',
+            icon: 'my-cv__icon--home',
+        },
+        {
+            link: '#about-me',
+            name: 'about-me',
+            icon: 'my-cv__icon--cool',
+        },
+        {
+            link: '#award',
+            name: 'awards',
+            icon: 'my-cv__icon--trophy',
+        },
+        {
+            link: '#skills',
+            name: 'my skills',
+            icon: 'my-cv__icon--fire',
+        },
+        {
+            link: '#projects',
+            name: 'my projects',
+            icon: 'my-cv__icon--briefcase',
+        },
+        {
+            link: '#experience',
+            name: 'experience',
+            icon: 'my-cv__icon--hammer',
+        }
+    ]
+
+.side-navigation
+    .side-navigation__list
+        each menu in menuList
+            a.side-navigation__link(href=menu.link)=menu.name
+                .side-navigation__span
+                    span(class=`${menu.icon}`)
