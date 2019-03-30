@@ -98,3 +98,20 @@
 .about-me__link-description {
     font-size: 1.5rem;
 }
+
+.about-me {
+    position: relative;
+}
+
+.about-me::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: radial-gradient(to right, #f85032, #e73827);
+    bottom: -1rem;
+    left: 0;
+    right: 0.05rem;
+    padding: 2rem;
+    transform: rotateZ(3deg);
+    border-top-right-radius: 1.5rem;
+}
