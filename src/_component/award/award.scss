@@ -1,6 +1,7 @@
 .award__header {
     color: $color-periwinkle-gray;
     @extend %header;
+    margin-top: 1.2rem;
 }
 
 .award__card {
