@@ -1,5 +1,5 @@
 .about-me {
-    background-image: repeating-linear-gradient($color-crusta, $color-salomie);
+    background-image: radial-gradient(to right, $color-flamingo, $color-cinnabar);
     padding-bottom: 1rem;
 }
 
@@ -31,7 +31,7 @@
 .about-me__avatar {
     width: 14rem;
     height: 14rem;
-    border: 0.5rem solid $color-portocaliu-manz;
+    border: 0.5rem solid $color-cinnabar;
     border-radius: 50%;
 }
 
@@ -78,6 +78,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.64s;
+
+    &:hover {
+        transform: scale(1.08);
+    }
     
     :visited {
         color: $color-gumbo;

@@ -1,7 +1,7 @@
 .menu__link {
     display: block;
     padding: 1rem 0;
-    border-bottom: 0.2rem solid $color-fiord;
+    border-bottom: 0.2rem solid $color-cinnabar;
     text-decoration: none;
     color: $color-white;
     &:nth-child(6) {
@@ -12,9 +12,9 @@
 .menu__list {
     font-size: 2rem;
     margin: 2rem;
-    border: 0.2rem solid $color-fiord;
+    border: 0.2rem solid $color-flamingo;
     border-radius: 0.3rem;
-    background-image: repeating-radial-gradient($color-manatee, $color-fiord);
+    background-image: repeating-radial-gradient($color-flamingo, $color-cinnabar);
 }
 
 .menu__span {

@@ -3,36 +3,92 @@
         text = 'Click the buttons to see my projects'
         projectsList = [
             {
+                name: 'To do app',
+                url: 'https://a11exandru.github.io/to-do-app',
+                source: 'https://github.com/a11exandru/to-do-app',
+                image: 'asset/image/to-do-app.png'
+            },
+            {
                 name: 'Roberto Blake replica',
                 url: 'https://a11exandru.github.io/Roberto-Blake-replica',
+                source: 'https://github.com/a11exandru/Roberto-Blake-replica',
+                image: 'asset/image/roberto-blake-replica.png'
             },
             {
                 name: 'My Online CV',
                 url: 'https://a11exandru.github.io/my-cv-final',
-            },
-            {
-                name: 'Quick Blog',
-                url: 'https://a11exandru.github.io/quick-blog',
+                source: 'https://github.com/a11exandru/my-cv-final',
+                image: 'asset/image/my-cv-final.png'
             },
             {
                 name: 'Great Pictures',
                 url: 'https://a11exandru.github.io/great-pictures',
+                source: 'https://github.com/a11exandru/great-pictures',
+                image: 'asset/image/great-pictures.png'
+            },
+        ]
+        projectListAll = [
+            {
+                name: 'Quick Blog',
+                url: 'https://a11exandru.github.io/quick-blog',
+                source: 'https://github.com/a11exandru/quick-blog',
+                image: 'asset/image/quick-blog.png'
+            },
+            {
+                name: 'Store App',
+                url: 'https://a11exandru.github.io/store-app',
+                source: 'https://github.com/a11exandru/store-app',
+                image: 'asset/image/store-app.png'
+            },
+            {
+                name: 'Plumbers',
+                url: 'https://a11exandru.github.io/plumbers',
+                source: 'https://github.com/a11exandru/plumbers',
+                image: 'asset/image/plumbers.png'
             },
             {
                 name: 'W3Schools Replica',
                 url: 'https://a11exandru.github.io/w3schools-replica',
+                source: 'https://github.com/a11exandru/w3schools-replica',
+                image: 'asset/image/w3schools-replica.png'
+            },
+            {
+                name: 'Login-Form',
+                url: 'https://a11exandru.github.io/login-form',
+                source: 'https://github.com/a11exandru/login-form',
+                image: 'asset/image/login-form.png'
             },
             {
                 name: 'Mega-menu',
                 url: 'https://a11exandru.github.io/mega-menu',
+                source: 'https://github.com/a11exandru/mega-menu',
+                image: 'asset/image/mega-menu.png'
             },
         ]
-    
+
+
 #projects
 .projects
     .projects__header=header
-    .project__text
-    .projects__text=text
     .projects__list
         each project in projectsList
-            a.project(href=project.url, target='blank', title=project.name)=project.name
+            p=project.name
+            .project-flex
+                .project-image
+                    img(src=project.image)
+                .buttons
+                    a.site(href=project.url, target='blank') Click to visit
+                    a.source(href=project.source, target='blank') Source code
+    input(type="radio" id="show-more")
+    label(for="show-more") 
+        | Show more
+        span(class="fa fa-angle-double-down")
+    .projects__list-all
+        each project in projectListAll
+            p=project.name
+            .project-flex
+                .project-image
+                    img(src=project.image)
+                .buttons
+                    a.site(href=project.url, target='blank') Click to visit
+                    a.source(href=project.source, target='blank') Source code

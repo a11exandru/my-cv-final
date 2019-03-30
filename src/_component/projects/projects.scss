@@ -3,38 +3,126 @@
     color: $color-periwinkle-gray;
 }
 
-.projects__text {
-    text-align: center;
-    font-size: 1.7rem;
-    background-image: repeating-linear-gradient($color-manatee, $color-fiord);
-    color: $color-white;
-    padding: 1.6rem;
-}
-
-.project {
-    margin: 1rem;
-    padding: 1rem;
-    text-decoration: none;
-    width: 43%;
-    text-align: center;
-    font-size: 1.5rem;
-    border: 0.2rem solid $color-fiord;
-    color: $color-white;
-    background-color: $color-pelarous;
-    border-radius: 0.3rem;
-
-    &:visited {
-        color: $color-white;
+.projects__list,
+.projects__list-all {
+    p {
+        margin: 1rem 1rem 1.9rem;
+        font-size: 1.5rem;
     }
 
-    &:hover {
-        border-color: $color-white;
+    img {
+        width: 100%;
+        height: 200px;
+        // float: left;
+        box-shadow: 0px 0px 10px 4px #888888;
+    }
+
+    .project-image {
+        margin: 0 1rem;
+    }
+
+    //  style the buttons
+
+    .buttons {
+        display: flex;
+        width: 100%;
+
+        a {
+            border-radius: 0.3rem;
+            margin: 1rem;
+            padding: 1.2rem;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: 0.64s;
+            border: 1px solid;
+        }
+    }
+    
+    .site {
+        width: 50%;
+        background-color: $color-white;
+        color: $color-red;
+        border-color: $color-red;
+
+        &:hover {
+            background-color: $color-red;
+            color: $color-white;
+            border-color: $color-white;
+        }
+    }
+
+    .source {
+        width: 50%;
+        color: $color-fiord;
+
+        &:hover {
+            background-color: $color-fiord;
+            color: $color-white;
+        }
     }
 }
 
-.projects__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-image: radial-gradient($color-manatee, $color-fiord);
+@media (orientation: landscape) {
+    .projects__list,
+    .projects__list-all {
+        img {
+            width: 90%;
+            height: 270px;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-flex {
+            display: flex;
+        }
+
+        .buttons {
+            padding-right: 4.5rem;
+            padding-top: 1.5rem;
+            width: 40%;
+            display: block;
+        }
+
+        .site {
+            display: block;
+            width: 12rem;
+        }
+
+        .source {
+            display: block;
+            width: 12rem;
+        }
+    }
 }
+
+.projects__list-all {
+    display: none;
+}
+
+.projects {
+    input {
+        display: none;
+    }
+
+    label {
+        position: relative;
+        margin: 0 auto;
+        left: 50%;
+        margin-left: -2.8rem;
+        text-decoration: underline;
+        cursor: pointer;
+        color: $color-fiord;
+
+        span {
+            margin-left: 0.3rem;
+        }
+    }
+}
+
+#show-more:checked + label + .projects__list-all {
+    display: block;
+}
+
+#show-more:checked + label {
+        display: none;
+    }

@@ -16,7 +16,7 @@
 .experience__title {
     display: block;
     font-size: 2rem;
-    background-color: $color-pelarous;
+    background: radial-gradient(to right, $color-flamingo, $color-cinnabar);
     padding: 1.5rem 2rem;
     color: $color-white;
     margin: 0.1rem 0;
@@ -24,7 +24,7 @@
 }
 
 .experience__details {
-    border: 0.2rem solid $color-pelarous;
+    border: 0.2rem solid $color-flamingo;
     margin: 0 0.2rem;
 }
 
